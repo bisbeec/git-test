@@ -18,7 +18,7 @@ h4 {
 
 #shape {
 	background: steelblue;
-	height: 200px;
+	height: 100px;
 	width: 300px;
 }
 
@@ -33,4 +33,22 @@ h4 {
 
 .shape.circle {
 	border-radius: 50%;
+}
+
+.img-wrap {
+	width: 500px;
+	overflow: hidden;
+	transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+img {
+	width: 100%;
+	display: block;
+	transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+.img-wrap:hover {
+	transform: scale(.98);
+}
+.img-wrap:hover img {
+	transform: scale(1.2);
 }
