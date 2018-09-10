@@ -1,3 +1,7 @@
+* {
+	box-sizing: border-box;
+}
+
 h1 {
 	color: brown;
 }
@@ -38,7 +42,7 @@ p {
 	transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-img {
+img#plane {
 	width: 100%;
 	display: block;
 	transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
@@ -46,6 +50,90 @@ img {
 .img-wrap:hover {
 	transform: scale(.98);
 }
-.img-wrap:hover img {
+.img-wrap:hover img#plane {
 	transform: scale(1.2);
+}
+
+
+.grid figure {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    margin: 10px 1%;
+    min-width: 320px;
+    max-width: 480px;
+    max-height: 360px;
+    width: 48%;
+    background: #3085a3;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+}
+
+.grid figure img {
+    position: relative;
+    display: block;
+    min-height: 100%;
+    max-width: 100%;
+    opacity: 0.8;
+}
+
+figure.effect-zoe figcaption {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	text-transform: uppercase;
+    font-size: 1.25em;
+    display: block;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    top: auto;
+    bottom: 0;
+    padding: 1em;
+    height: 3.75em;
+    background: #fff;
+    color: #3c4a50;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(0,100%,0);
+    transform: translate3d(0,100%,0);
+}
+
+
+figure.effect-zoe h2 {
+	display: inline-block;
+	-webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(0,200%,0);
+    transform: translate3d(0,200%,0);
+    float: left;
+    margin: 0;
+    word-spacing: -0.15em;
+    font-weight: 300;
+}
+
+figure.effect-zoe p.description {
+    position: absolute;
+    bottom: 8em;
+    padding: 2em;
+    color: #fff;
+    text-transform: none;
+    font-size: 90%;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+    -webkit-backface-visibility: hidden;
+}
+
+figure.effect-zoe:hover figcaption, figure.effect-zoe:hover h2, figure.effect-zoe:hover p.icon-links a {
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+figure.effect-zoe h2, figure.effect-zoe p.icon-links a {
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(0,200%,0);
+    transform: translate3d(0,200%,0);
 }
